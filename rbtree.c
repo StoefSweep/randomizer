@@ -41,7 +41,7 @@ void leftRotate(rbTree* tree, treeNode* n){
 	if(n->right != NULL){
 		n->right->parent = n;
 	}
-	//There are three cases for this rotation:
+	//There are two cases for this rotation:
 	// Case 1: n is the root
 	// Case 2: n is not the root.
 	if(n == tree->root){
@@ -91,7 +91,7 @@ void rightRotate(rbTree* tree, treeNode* n){
 		n->left->parent = n;
 
 	}
-	// There are 3 total variations on the process of swapping the parents. The cases for each are as follows:
+	// There are 3 total variations on the process of swapping the parents. The cases for two of them are as follows:
 	// Case 1: n is the root.
 	// Case 2: n is a child, indirect or direct, of the root.
 	if(n == tree->root){
